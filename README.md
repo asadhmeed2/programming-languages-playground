@@ -8,3 +8,10 @@
      ```bash
         nvim .
     ```
+
+    i have installed KeckStart.nvim on my windows wsl 
+
+    * to jump backward/forward through your jump history use
+    Ctrl-o / Ctrl-i 
+
+    * to search in file in normal mode add / then the word you want to search for.

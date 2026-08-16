@@ -4,7 +4,7 @@ namespace MyFirstApp.classes
 {
     public class CheckAge
     {
-        public static void Main(string[] args)
+        public void start()
         {
             Console.Write("Please enter your age: ");
             int age = Convert.ToInt32(Console.ReadLine());
