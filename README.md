@@ -17,3 +17,5 @@
     * to search in file in normal mode add / then the word you want to search for.
 
     * D — delete from cursor to end of line (leaves the line itself)
+
+    * <space>/ to search in the file
