@@ -19,3 +19,5 @@
     * D — delete from cursor to end of line (leaves the line itself)
 
     * <space>/ to search in the file
+
+    * :e newFile.cs to create new file from within nvim
