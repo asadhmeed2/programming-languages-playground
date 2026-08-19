@@ -21,3 +21,9 @@
     * <space>/ to search in the file
 
     * :e newFile.cs to create new file from within nvim
+
+    *   to select and delete more then one line 
+        V    → visual line mode (capital V)
+        j/k  → extend the selection up or down
+        d   → delete the selected lines
+        
