@@ -26,4 +26,8 @@
         V    → visual line mode (capital V)
         j/k  → extend the selection up or down
         d   → delete the selected lines
+
+    * :Ex — opens netrw, the built-in file browser, showing the current directory's contents in a full window.
+
+    * Runs ls in a scratch window, prints the output, waits for Enter. :!ls -la for detail, :!ls -d */ for directories only.
         
