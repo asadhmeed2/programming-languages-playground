@@ -1,8 +1,18 @@
 class Lasagna
 {
-    // TODO: define the 'ExpectedMinutesInOven()' method
+     private int minutesInOven = 40;
 
-    // TODO: define the 'RemainingMinutesInOven()' method
+
+     public int ExpectedMinutesInOven() => this.minutesInOven;
+
+    public float RemainingMinutesInOven(float currentTime) 
+    {
+	if(currentTime < 0 || currentTime > this.minutesInOven)
+	{
+		return 0;
+	}
+	return this.minutesInOven - currentTime;
+    }
 
     // TODO: define the 'PreparationTimeInMinutes()' method
 

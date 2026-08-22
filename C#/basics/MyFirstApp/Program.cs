@@ -1,6 +1,6 @@
 ﻿using MyFirstApp.classes;
 
-using System; 
+using System;
 
 //var checkage = new CheckAge();
 
@@ -10,23 +10,28 @@ using System;
 
 //Console.WriteLine(hello.Hello());
 
-int[] birdsPerDay = { 2, 5, 0, 7, 4, 1 };
+//int[] birdsPerDay = { 2, 5, 0, 7, 4, 1 };
 
-var birds = new  BirdCount(birdsPerDay);
+//var birds = new  BirdCount(birdsPerDay);
 
-Console.WriteLine(string.Join(" ",BirdCount.LastWeek()));
+//Console.WriteLine(string.Join(" ",BirdCount.LastWeek()));
 
 
-Console.WriteLine(birds.Today());
+//Console.WriteLine(birds.Today());
 
-birds.IncrementTodaysCount();
+//birds.IncrementTodaysCount();
 
-Console.WriteLine(birds.Today());
+//Console.WriteLine(birds.Today());
 
-Console.WriteLine(birds.HasDayWithoutBirds());
+//Console.WriteLine(birds.HasDayWithoutBirds());
 
-Console.WriteLine(birds.CountForFirstDays(4));
+//Console.WriteLine(birds.CountForFirstDays(4));
 
-Console.WriteLine("the busy days are:");
+//Console.WriteLine("the busy days are:");
 
-Console.WriteLine(birds.BusyDays());
+//Console.WriteLine(birds.BusyDays());
+
+
+var lasagna = new Lasagna();
+Console.WriteLine(lasagna.ExpectedMinutesInOven());
+Console.WriteLine(lasagna.RemainingMinutesInOven(20)); 
