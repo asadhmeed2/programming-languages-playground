@@ -4,6 +4,8 @@ class BirdCount
 {
     private int[] birdsPerDay;
 
+    private int busyDaysMinBirds = 5;
+
     public BirdCount(int[] birdsPerDay)
     {
         this.birdsPerDay = birdsPerDay;
@@ -60,7 +62,16 @@ class BirdCount
 
     public int BusyDays()
     {
-        throw new NotImplementedException("Please implement the BirdCount.BusyDays() method");
+        int busyDaysCount = 0;
+        foreach(int numberOfBirds in this.birdsPerDay)
+        {
+            if(numberOfBirds >= this.busyDaysMinBirds)
+            {
+                busyDaysCount += 1;
+            }
+        }
+
+        return busyDaysCount;
     }
 }
 
