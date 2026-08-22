@@ -42,7 +42,20 @@ class BirdCount
 
     public int CountForFirstDays(int numberOfDays)
     {
-        throw new NotImplementedException("Please implement the BirdCount.CountForFirstDays() method");
+
+        if(numberOfDays > this.birdsPerDay.Length || numberOfDays < 1)
+        {
+            return 0;
+        }
+
+        int count = 0;
+
+        for(int day = 0; day < numberOfDays; day++)
+        {
+            count += this.birdsPerDay[day];
+        }
+
+        return count;
     }
 
     public int BusyDays()

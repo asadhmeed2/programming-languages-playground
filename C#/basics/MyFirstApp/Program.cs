@@ -22,3 +22,7 @@ Console.WriteLine(birds.Today());
 birds.IncrementTodaysCount();
 
 Console.WriteLine(birds.Today());
+
+Console.WriteLine(birds.HasDayWithoutBirds());
+
+Console.WriteLine(birds.CountForFirstDays(4));
