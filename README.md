@@ -20,7 +20,9 @@
 
     * <space>/ to search in the file
 
-    * :e newFile.cs to create new file from within nvim
+    * :e path/to/file.cs to create new file from within nvim
+
+    * for navigation between file use <space>sf
 
     *   to select and delete more then one line 
         V    → visual line mode (capital V)
