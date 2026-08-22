@@ -16,5 +16,9 @@ var birds = new  BirdCount(birdsPerDay);
 
 Console.WriteLine(string.Join(" ",BirdCount.LastWeek()));
 
+
 Console.WriteLine(birds.Today());
 
+birds.IncrementTodaysCount();
+
+Console.WriteLine(birds.Today());
