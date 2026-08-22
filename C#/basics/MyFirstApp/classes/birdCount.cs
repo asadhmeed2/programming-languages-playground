@@ -11,11 +11,7 @@ class BirdCount
         this.birdsPerDay = birdsPerDay;
     }
 
-    public static int[] LastWeek()
-    {
-        int[] lastWeekCount = {0,2,5,3,7,8};
-        return lastWeekCount;
-    }
+    public static int[] LastWeek() => [0, 2, 5, 3, 7, 8, 4];
 
     public int Today()
     {
@@ -34,7 +30,7 @@ class BirdCount
         bool hasDayWithoutBirds = false;
         foreach (int birdsCount in this.birdsPerDay)
         {
-            if(birdsCount == 0 && !hasDayWithoutBirds)
+            if (birdsCount == 0 && !hasDayWithoutBirds)
             {
                 hasDayWithoutBirds = true;
             }
@@ -45,14 +41,14 @@ class BirdCount
     public int CountForFirstDays(int numberOfDays)
     {
 
-        if(numberOfDays > this.birdsPerDay.Length || numberOfDays < 1)
+        if (numberOfDays > this.birdsPerDay.Length || numberOfDays < 1)
         {
             return 0;
         }
 
         int count = 0;
 
-        for(int day = 0; day < numberOfDays; day++)
+        for (int day = 0; day < numberOfDays; day++)
         {
             count += this.birdsPerDay[day];
         }
@@ -63,9 +59,9 @@ class BirdCount
     public int BusyDays()
     {
         int busyDaysCount = 0;
-        foreach(int numberOfBirds in this.birdsPerDay)
+        foreach (int numberOfBirds in this.birdsPerDay)
         {
-            if(numberOfBirds >= this.busyDaysMinBirds)
+            if (numberOfBirds >= this.busyDaysMinBirds)
             {
                 busyDaysCount += 1;
             }
