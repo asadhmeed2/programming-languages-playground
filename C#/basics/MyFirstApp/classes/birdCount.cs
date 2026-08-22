@@ -1,15 +1,10 @@
 
 
-class BirdCount
+class BirdCount(int[] birdsPerDay)
 {
-    private int[] birdsPerDay;
+    private int[] birdsPerDay = birdsPerDay;
 
     private int busyDaysMinBirds = 5;
-
-    public BirdCount(int[] birdsPerDay)
-    {
-        this.birdsPerDay = birdsPerDay;
-    }
 
     public static int[] LastWeek() => [0, 2, 5, 3, 7, 8, 4];
 
