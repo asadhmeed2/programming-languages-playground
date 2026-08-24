@@ -3,6 +3,8 @@ class Lasagna
      private int minutesInOven = 40;
 
 
+     private int layerPreparingTime = 2;
+
      public int ExpectedMinutesInOven() => this.minutesInOven;
 
     public float RemainingMinutesInOven(float currentTime) 
@@ -15,6 +17,16 @@ class Lasagna
     }
 
     // TODO: define the 'PreparationTimeInMinutes()' method
+
+    public int PreparationTimeInMinutes(int numberOfLayers)
+    {
+	if(numberOfLayers <= 0)
+	{
+		return 0;
+	}
+	
+	return 	numberOfLayers * this.layerPreparingTime;
+    }
 
     // TODO: define the 'ElapsedTimeInMinutes()' method
 }

@@ -32,4 +32,11 @@
     * :Ex — opens netrw, the built-in file browser, showing the current directory's contents in a full window.
 
     * Runs ls in a scratch window, prints the output, waits for Enter. :!ls -la for detail, :!ls -d */ for directories only.
+
+
+    * to copy a word  use 
+    v      → character-wise visual mode (or V for whole lines)
+    j/w/e  → extend the selection
+    y      → yank it
+    Then p pastes after the cursor, P before it.
         
