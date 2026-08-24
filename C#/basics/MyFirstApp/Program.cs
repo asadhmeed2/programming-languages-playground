@@ -37,3 +37,4 @@ Console.WriteLine(lasagna.RemainingMinutesInOven(20));
 Console.WriteLine(lasagna.ExpectedMinutesInOven());
 Console.WriteLine(lasagna.PreparationTimeInMinutes(4)); 
 
+Console.WriteLine(lasagna.ElapsedTimeInMinutes(4,20));
