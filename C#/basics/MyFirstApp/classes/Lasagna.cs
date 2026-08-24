@@ -29,4 +29,16 @@ class Lasagna
     }
 
     // TODO: define the 'ElapsedTimeInMinutes()' method
+
+    public int ElapsedTimeInMinutes(int numberOfLayers, int ovenTimeInMinutes)
+    {
+	    if(numberOfLayers <= 0 || ovenTimeInMinutes <= 0)
+	    {
+		return 0;		
+	    }
+
+	    int preparationTime = this.PreparationTimeInMinutes(numberOfLayers);
+
+	    return ovenTimeInMinutes + preparationTime; 
+    }
 }
