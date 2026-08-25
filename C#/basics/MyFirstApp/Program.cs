@@ -32,9 +32,18 @@ using System;
 //Console.WriteLine(birds.BusyDays());
 
 
-var lasagna = new Lasagna();
-Console.WriteLine(lasagna.RemainingMinutesInOven(20)); 
-Console.WriteLine(lasagna.ExpectedMinutesInOven());
-Console.WriteLine(lasagna.PreparationTimeInMinutes(4)); 
+//var lasagna = new Lasagna();
+//Console.WriteLine(lasagna.RemainingMinutesInOven(20)); 
+//Console.WriteLine(lasagna.ExpectedMinutesInOven());
+//Console.WriteLine(lasagna.PreparationTimeInMinutes(4)); 
 
-Console.WriteLine(lasagna.ElapsedTimeInMinutes(4,20));
+//Console.WriteLine(lasagna.ElapsedTimeInMinutes(4,20));
+
+bool knightIsAwake = true;
+
+Console.WriteLine(QuestLogic.CanFastAttack(knightIsAwake));
+
+Console.WriteLine(QuestLogic.CanFastAttack(knightIsAwake));
+
+Console.WriteLine(QuestLogic.CanFastAttack(knightIsAwake));
+

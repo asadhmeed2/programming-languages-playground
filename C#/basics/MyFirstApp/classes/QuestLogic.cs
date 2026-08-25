@@ -2,7 +2,7 @@ static class QuestLogic
 {
     public static bool CanFastAttack(bool knightIsAwake)
     {
-        throw new NotImplementedException("Please implement the (static) QuestLogic.CanFastAttack() method");
+        return knightIsAwake == false;
     }
 
     public static bool CanSpy(bool knightIsAwake, bool archerIsAwake, bool prisonerIsAwake)
