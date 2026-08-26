@@ -6,7 +6,7 @@ static class QuestLogic {
 
     public static bool CanSpy(bool knightIsAwake, bool archerIsAwake, bool prisonerIsAwake)
     {
-        return knightIsAwake || archerIsAwake ||  prisonerIsAwake
+        return knightIsAwake || archerIsAwake ||  prisonerIsAwake;
     } 
 
 
