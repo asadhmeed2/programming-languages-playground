@@ -12,12 +12,23 @@ static class QuestLogic {
 
     public static bool CanSignalPrisoner(bool archerIsAwake, bool prisonerIsAwake)
     {
-        return  !archerIsAwake && prisonerIsAwake
+        return  !archerIsAwake && prisonerIsAwake;
     }
 
     public static bool CanFreePrisoner(bool knightIsAwake, bool archerIsAwake, bool prisonerIsAwake, bool petDogIsPresent)
     {
-        throw new NotImplementedException("Please implement the (static) QuestLogic.CanFreePrisoner() method");
+        bool freePresoner = false;
+
+        if(petDogIsPresent && !archerIsAwake && knightIsAwake)
+        {
+            freePresoner = true;
+        }
+        if(!PetDogIsPresent &&  prisonerIsAwake && !(knightIsAwake && archerIsAwake))
+        {
+            freePresoner = true;
+        }
+
+        return freePresoner;
     }
 }
 
