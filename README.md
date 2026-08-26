@@ -41,4 +41,4 @@
     Then p pastes after the cursor, P before it.
         
     * to jump to the end of the line use $
-    * to jump to the first of the line use ^
+    * to jump to the start of the line use ^
