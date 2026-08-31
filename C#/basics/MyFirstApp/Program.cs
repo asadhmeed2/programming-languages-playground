@@ -39,11 +39,17 @@ using System;
 
 //Console.WriteLine(lasagna.ElapsedTimeInMinutes(4,20));
 
-bool knightIsAwake = true;
+//bool knightIsAwake = true;
 
-Console.WriteLine(QuestLogic.CanFastAttack(knightIsAwake));
+//Console.WriteLine(QuestLogic.CanFastAttack(knightIsAwake));
 
-Console.WriteLine(QuestLogic.CanFastAttack(knightIsAwake));
+//Console.WriteLine(QuestLogic.CanFastAttack(knightIsAwake));
 
-Console.WriteLine(QuestLogic.CanFastAttack(knightIsAwake));
+
+
+TeamSupport manager = new Manager();
+
+var name = new  SecurityPassMaker();
+
+Console.WriteLine(name.GetDisplayName(manager));
 

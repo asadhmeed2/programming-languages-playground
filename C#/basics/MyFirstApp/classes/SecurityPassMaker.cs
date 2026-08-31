@@ -1,9 +1,8 @@
-
 public class SecurityPassMaker
 {
     public string GetDisplayName(TeamSupport support)
     {
-        throw new NotImplementedException($"Please implement the SecurityPassMaker.GetDisplayName() method");
+        return support.Title;
     }
 }
 
