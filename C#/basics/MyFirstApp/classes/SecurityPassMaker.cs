@@ -2,7 +2,10 @@ public class SecurityPassMaker
 {
     public string GetDisplayName(TeamSupport support)
     {
-        return support.Title;
+        if(support is Staff){
+             return support.Title;
+        }
+        return String.Empty;
     }
 }
 
