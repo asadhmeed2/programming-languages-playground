@@ -2,7 +2,12 @@ public class SecurityPassMaker
 {
     public string GetDisplayName(TeamSupport support)
     {
-        if(support is Staff){
+        if(support is Staff)
+        {
+            if(support is Security)
+            {
+                return support.Title + "Priority Personnel";
+            }
              return support.Title;
         }
         return "Too Important for a Security Pass";

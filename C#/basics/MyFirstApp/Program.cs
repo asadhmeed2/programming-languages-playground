@@ -49,7 +49,8 @@ using System;
 
 TeamSupport manager = new Manager();
 
-var name = new  SecurityPassMaker();
+var spm = new  SecurityPassMaker();
 
-Console.WriteLine(name.GetDisplayName(manager));
+Console.WriteLine(spm.GetDisplayName(manager));
 
+Console.WriteLine(spm.GetDisplayName(new Security()));
