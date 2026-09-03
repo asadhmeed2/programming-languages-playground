@@ -5,7 +5,7 @@ public class SecurityPassMaker
         if(support is Staff){
              return support.Title;
         }
-        return String.Empty;
+        return "Too Important for a Security Pass";
     }
 }
 
