@@ -6,7 +6,7 @@ public class SecurityPassMaker
         {
             if(support is Security)
             {
-                return support.Title + "Priority Personnel";
+                return support.Title + " Priority Personnel";
             }
              return support.Title;
         }
