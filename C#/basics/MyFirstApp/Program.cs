@@ -52,3 +52,6 @@ string s = Identifier.Clean("my   Id");
 
 Console.WriteLine(s);
 
+string s2 = Identifier.Clean("my\0Id");
+Console.WriteLine(s2);
+
