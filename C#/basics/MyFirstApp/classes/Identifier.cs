@@ -5,9 +5,10 @@ public static class Identifier
     {
  	var outputStr = "";
 
-        foreach(char c in identifier)
+        for(int i = 0; i <= identifier.Length; i++)
 	{
-	
+	char c = identifier[i];
+
 	if(c == ' ')
 	{
 		outputStr = $"{outputStr}_";
