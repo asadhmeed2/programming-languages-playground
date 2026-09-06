@@ -1,23 +1,31 @@
 
+using System.Linq;
+using System.Text;
+
 public static class Identifier
 {
     public static string Clean(string identifier)
     {
         var output = "";
+        bool  capitalizeNext = false;
+        var sb = new StringBuilder();
 
-        for(int i =0; i < identifier.Length; i++)
+        foreach (var c in identifier)
         {
-            if(Char.IsControl(identifier, i))
+            if (c == '\0')
+                sb.Append("CTRL");
+            else if (c == ' ')
+                sb.Append('_');
+             else if (c == '-')
+                capitalizeNext = true;
+            else if (char.IsAsciiLetter(c))
             {
-                output = $"{output}CTRL";
-            }
-            else
-            {
-                 output = $"{output}{identifier[i]}";
-            }
+                sb.Append(capitalizeNext ? char.ToUpper(c) : c);
+                capitalizeNext = false;
+            }   
         }
+        output = sb.ToString();
 
-        output = identifier.Replace(" ", "_");
         return output;
     }
 }
