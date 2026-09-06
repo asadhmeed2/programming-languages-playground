@@ -22,6 +22,9 @@ public static class Identifier
             {
 
             }
+            else if (c >= '\u03B1' && c <= '\u03C9')
+            {
+            }
             else
             {
                 sb.Append(capitalizeNext ? char.ToUpper(c) : c);
