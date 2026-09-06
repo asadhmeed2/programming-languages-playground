@@ -18,6 +18,10 @@ public static class Identifier
                 sb.Append('_');
              else if (c == '-')
                 capitalizeNext = true;
+            else if (!char.IsLetter(c))
+            {
+
+            }
             else
             {
                 sb.Append(capitalizeNext ? char.ToUpper(c) : c);
