@@ -48,10 +48,10 @@ using System;
 
 
 
-string s = Identifier.Clean("my   Id");
+//string s = Identifier.Clean("my   Id");
 
-Console.WriteLine(s);
+//Console.WriteLine(s);
 
-string s2 = Identifier.Clean("my\0Id");
-Console.WriteLine(s2);
-
+//string s2 = Identifier.Clean("my\0Id");
+//Console.WriteLine(s2);
+RemoteControlCar car = RemoteControlCar.Buy();

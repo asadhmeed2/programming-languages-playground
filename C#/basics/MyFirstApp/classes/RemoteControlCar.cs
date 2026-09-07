@@ -3,7 +3,7 @@ class RemoteControlCar
 {
     public static RemoteControlCar Buy()
     {
-        throw new NotImplementedException("Please implement the (static) RemoteControlCar.Buy() method");
+        return new RemotControlCar();
     }
 
     public string DistanceDisplay()
