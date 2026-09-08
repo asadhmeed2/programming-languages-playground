@@ -1,19 +1,25 @@
 
 class RemoteControlCar
 {
+
+    private int _distance = 0;
+    
+    private int _battery = 0;
+
+
     public static RemoteControlCar Buy()
     {
-        return new RemotControlCar();
+        return new RemoteControlCar();
     }
 
     public string DistanceDisplay()
     {
-        throw new NotImplementedException("Please implement the RemoteControlCar.DistanceDisplay() method");
+        return $"Driven {this._distance} meters";
     }
 
     public string BatteryDisplay()
     {
-        throw new NotImplementedException("Please implement the RemoteControlCar.BatteryDisplay() method");
+        return $"Battery at {this._battery}%";
     }
 
     public void Drive()
