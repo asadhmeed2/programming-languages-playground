@@ -4,7 +4,7 @@ class RemoteControlCar
 
     private int _distance = 0;
     
-    private int _battery = 0;
+    private int _battery = 100;
 
 
     public static RemoteControlCar Buy()
@@ -24,6 +24,7 @@ class RemoteControlCar
 
     public void Drive()
     {
-        this._distance += 10;
+        this._distance += 20;
+        this._battery -= 1;
     }
 }
