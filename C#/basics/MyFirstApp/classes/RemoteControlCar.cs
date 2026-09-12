@@ -24,6 +24,6 @@ class RemoteControlCar
 
     public void Drive()
     {
-        throw new NotImplementedException("Please implement the RemoteControlCar.Drive() method");
+        this._distance += 10;
     }
 }
