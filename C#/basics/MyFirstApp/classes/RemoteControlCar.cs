@@ -24,6 +24,10 @@ class RemoteControlCar
 
     public void Drive()
     {
+        if(this._battery == 0){
+            return;
+        }
+
         this._distance += 20;
         this._battery -= 1;
     }
