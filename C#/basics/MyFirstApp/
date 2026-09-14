@@ -7,11 +7,15 @@ class RemoteControlCar
     private int _battery = 100;
 
 
-    public static RemoteControlCar Buy() => new RemoteControlCar();
-    
+    public static RemoteControlCar Buy()
+    {
+        return new RemoteControlCar();
+    }
 
-    public string DistanceDisplay() => $"Driven {this._distance} meters";
-    
+    public string DistanceDisplay()
+    {
+        return $"Driven {this._distance} meters";
+    }
 
     public string BatteryDisplay()
     {
