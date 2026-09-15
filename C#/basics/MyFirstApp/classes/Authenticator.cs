@@ -1,3 +1,7 @@
+
+using System.Collections.ObjectModel;
+
+
 public class Authenticator
 {
     private class EyeColor
@@ -12,12 +16,8 @@ public class Authenticator
     public Authenticator(Identity admin)
     {
         this.admin = admin;
-    }
 
-    private Identity admin;
-
-    private readonly IDictionary<string, Identity> developers
-        = new Dictionary<string, Identity>
+        var _developers = new Dictionary<string, Identity>
         {
             ["Bertrand"] = new Identity
             {
@@ -31,6 +31,13 @@ public class Authenticator
                 EyeColor = "brown"
             }
         };
+        
+        developers = new ReadOnlyDictionary<string, Identity>(_developers);
+    }
+
+    private Identity admin;
+
+    private readonly IDictionary<string, Identity> developers;
 
     public Identity Admin
     {
