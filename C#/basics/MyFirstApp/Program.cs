@@ -54,9 +54,6 @@ using System;
 
 //string s2 = Identifier.Clean("my\0Id");
 //Console.WriteLine(s2);
-RemoteControlCar car = RemoteControlCar.Buy();
-string carDiostance = car.DistanceDisplay();
-string carBattery = car.BatteryDisplay();
 
-Console.WriteLine(carDiostance);
-Console.WriteLine( carBattery);
+
+var car = new RemoteControlCar(10, 2);
