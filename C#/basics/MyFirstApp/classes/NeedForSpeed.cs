@@ -23,13 +23,11 @@ class RemoteControlCar
             return;
         }
 
+        this.battery -= this.batteryDrain;
         this.distance += this.speed;
     }
 
-    public static RemoteControlCar Nitro()
-    {
-        throw new NotImplementedException("Please implement the (static) RemoteControlCar.Nitro() method");
-    }
+    public static RemoteControlCar Nitro() => new RemoteControlCar(50,4);
 }
 
 class RaceTrack
@@ -43,6 +41,11 @@ class RaceTrack
 
     public bool TryFinishTrack(RemoteControlCar car)
     {
-        throw new NotImplementedException("Please implement the RaceTrack.TryFinishTrack() method");
+        while(car.DistanceDriven() < this.distance && !car.BatteryDrained())
+        {
+        car.Drive();
+        }
+
+        return car.DistanceDriven() >= this.distance;
     }
 }
