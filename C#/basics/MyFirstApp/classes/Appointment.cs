@@ -3,7 +3,7 @@ using System.Globalization;
 
 static class Appointment
 {
-    static private string[] validDateFormats = { "M/d/yyyy H:mm:ss","MMMM d, yyyy H:mm:ss", "dddd, MMMM d, yyyy H:mm:ss" };
+    static private string[] validDateFormats = { "M/d/yyyy H:mm:ss", "MMMM d, yyyy H:mm:ss", "dddd, MMMM d, yyyy H:mm:ss" };
     //dates format that will be used in this function are 
     //"7/25/2019 13:45:00",
     //"July 25, 2019 13:45:00"
@@ -28,12 +28,16 @@ static class Appointment
 
     public static bool HasPassed(DateTime appointmentDate)
     {
-        throw new NotImplementedException("Please implement the (static) Appointment.HasPassed() method");
+        if(appointmentDate < DateTime.Now)
+        {
+            return true;
+        }
+        return false;
     }
 
     public static bool IsAfternoonAppointment(DateTime appointmentDate)
     {
-        throw new NotImplementedException("Please implement the (static) Appointment.IsAfternoonAppointment() method");
+
     }
 
     public static string Description(DateTime appointmentDate)
