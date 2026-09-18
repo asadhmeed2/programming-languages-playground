@@ -35,10 +35,7 @@ static class Appointment
         return false;
     }
 
-    public static bool IsAfternoonAppointment(DateTime appointmentDate)
-    {
-
-    }
+    public static bool IsAfternoonAppointment(DateTime appointmentDate)=> appointmentDate.Hour >= 12 && appointmentDate.Hour < 18;
 
     public static string Description(DateTime appointmentDate)
     {
