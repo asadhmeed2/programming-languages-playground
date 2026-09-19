@@ -17,7 +17,10 @@ public static class DialingCodes
 
     public static Dictionary<int, string> AddCountryToEmptyDictionary(int countryCode, string countryName)
     {
-        throw new NotImplementedException($"Please implement the (static) AddCountryToEmptyDictionary() method");
+        var dict = new Dictionary<int,string>;
+        dict[countryCode] = countryName;
+
+        return dict;
     }
 
     public static Dictionary<int, string> AddCountryToExistingDictionary(
