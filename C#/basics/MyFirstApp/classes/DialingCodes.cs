@@ -2,12 +2,17 @@ public static class DialingCodes
 {
     public static Dictionary<int, string> GetEmptyDictionary()
     {
-        throw new NotImplementedException($"Please implement the (static) GetEmptyDictionary() method");
+        return new Dictionary<int, string>();
     }
 
     public static Dictionary<int, string> GetExistingDictionary()
     {
-        throw new NotImplementedException($"Please implement the (static) GetExistingDictionary() method");
+        new Dictionary<int, string>()
+        {
+        [1] = "United States of America",
+        [55] = "Brazil",
+        [91] = "India"
+        }
     }
 
     public static Dictionary<int, string> AddCountryToEmptyDictionary(int countryCode, string countryName)
