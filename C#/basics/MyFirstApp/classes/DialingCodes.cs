@@ -9,15 +9,15 @@ public static class DialingCodes
     {
         return new Dictionary<int, string>()
         {
-        [1] = "United States of America",
-        [55] = "Brazil",
-        [91] = "India"
+            [1] = "United States of America",
+            [55] = "Brazil",
+            [91] = "India"
         };
     }
 
     public static Dictionary<int, string> AddCountryToEmptyDictionary(int countryCode, string countryName)
     {
-        var dict = new Dictionary<int,string>();
+        var dict = new Dictionary<int, string>();
         dict[countryCode] = countryName;
 
         return dict;
@@ -26,13 +26,13 @@ public static class DialingCodes
     public static Dictionary<int, string> AddCountryToExistingDictionary(
         Dictionary<int, string> existingDictionary, int countryCode, string countryName)
     {
-        if(existingDictionary.TryGetValue(countryCode,out var value))
+        if (existingDictionary.TryGetValue(countryCode, out var value))
         {
-            return  existingDictionary;
+            return existingDictionary;
         }
 
         existingDictionary[countryCode] = countryName;
-        return  existingDictionary;
+        return existingDictionary;
     }
 
     public static string GetCountryNameFromDictionary(
