@@ -7,17 +7,17 @@ public static class DialingCodes
 
     public static Dictionary<int, string> GetExistingDictionary()
     {
-        new Dictionary<int, string>()
+        return new Dictionary<int, string>()
         {
         [1] = "United States of America",
         [55] = "Brazil",
         [91] = "India"
-        }
+        };
     }
 
     public static Dictionary<int, string> AddCountryToEmptyDictionary(int countryCode, string countryName)
     {
-        var dict = new Dictionary<int,string>;
+        var dict = new Dictionary<int,string>();
         dict[countryCode] = countryName;
 
         return dict;
@@ -26,13 +26,25 @@ public static class DialingCodes
     public static Dictionary<int, string> AddCountryToExistingDictionary(
         Dictionary<int, string> existingDictionary, int countryCode, string countryName)
     {
-        throw new NotImplementedException($"Please implement the (static) AddCountryToExistingDictionary() method");
+        if(existingDictionary.TryGetValue(countryCode,out var value))
+        {
+            return  existingDictionary;
+        }
+
+        existingDictionary[countryCode] = countryName;
+        return  existingDictionary;
     }
 
     public static string GetCountryNameFromDictionary(
         Dictionary<int, string> existingDictionary, int countryCode)
     {
-        throw new NotImplementedException($"Please implement the (static) GetCountryNameFromDictionary() method");
+        var exists = existingDictionary.TryGetValue(countryCode, out var countryName);
+        if (exists)
+        {
+            return countryName ?? string.Empty;
+        }
+
+        return string.Empty;
     }
 
     public static bool CheckCodeExists(Dictionary<int, string> existingDictionary, int countryCode)
