@@ -51,14 +51,20 @@ public static class DialingCodes
     {
         
         var exists = existingDictionary.ContainsKey(countryCode);
-         return  exists
+         return  exists;
         
     }
 
     public static Dictionary<int, string> UpdateDictionary(
         Dictionary<int, string> existingDictionary, int countryCode, string countryName)
     {
-        throw new NotImplementedException($"Please implement the (static) UpdateDictionary() method");
+        if(!this.CheckCodeExists(existingDictionary,countryCode))
+        {
+            return existingDictionary;
+        }
+        existingDictionary[countryCode] = countryName;
+
+            return  existingDictionary;
     }
 
     public static Dictionary<int, string> RemoveCountryFromDictionary(

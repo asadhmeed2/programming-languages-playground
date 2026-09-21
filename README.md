@@ -42,3 +42,8 @@
         
     * to jump to the end of the line use $
     * to jump to the start of the line use ^
+
+    * to copy all the text :
+    gg — jump to the first line
+    V — start linewise visual mode
+    G — extend to the last line
