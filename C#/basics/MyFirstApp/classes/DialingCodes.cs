@@ -49,39 +49,55 @@ public static class DialingCodes
 
     public static bool CheckCodeExists(Dictionary<int, string> existingDictionary, int countryCode)
     {
-        
+
         var exists = existingDictionary.ContainsKey(countryCode);
-         return  exists;
-        
+        return exists;
+
     }
 
     public static Dictionary<int, string> UpdateDictionary(
         Dictionary<int, string> existingDictionary, int countryCode, string countryName)
     {
-        if(!DialingCodes.CheckCodeExists(existingDictionary,countryCode))
+        if (!DialingCodes.CheckCodeExists(existingDictionary, countryCode))
         {
             return existingDictionary;
         }
         existingDictionary[countryCode] = countryName;
 
-            return  existingDictionary;
+        return existingDictionary;
     }
 
     public static Dictionary<int, string> RemoveCountryFromDictionary(
         Dictionary<int, string> existingDictionary, int countryCode)
     {
-       
-        if(!DialingCodes.CheckCodeExists(existingDictionary,countryCode))
+
+        if (!DialingCodes.CheckCodeExists(existingDictionary, countryCode))
         {
             return existingDictionary;
         }
 
-            existingDictionary.Remove(countryCode);
-        return existingDictionary;   
+        existingDictionary.Remove(countryCode);
+        return existingDictionary;
     }
 
     public static string FindLongestCountryName(Dictionary<int, string> existingDictionary)
     {
-        throw new NotImplementedException($"Please implement the (static) FindLongestCountryName() method");
+        if (existingDictionary.Keys.Count == 0)
+        {
+            return String.Empty;
+        }
+
+        int longestValueCount = 0;
+        string longestValue = String.Empty;
+        foreach (var value in existingDictionary.Values)
+        {
+            if (value.Length > longestValueCount)
+            {
+                longestValueCount = value.Length;
+                longestValue = value;
+            }
+        }
+
+        return longestValue;
     }
 }
