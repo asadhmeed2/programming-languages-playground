@@ -49,7 +49,10 @@ public static class DialingCodes
 
     public static bool CheckCodeExists(Dictionary<int, string> existingDictionary, int countryCode)
     {
-        throw new NotImplementedException($"Please implement the (static) CheckCodeExists() method");
+        
+        var exists = existingDictionary.ContainsKey(countryCode);
+         return  exists
+        
     }
 
     public static Dictionary<int, string> UpdateDictionary(
