@@ -58,7 +58,7 @@ public static class DialingCodes
     public static Dictionary<int, string> UpdateDictionary(
         Dictionary<int, string> existingDictionary, int countryCode, string countryName)
     {
-        if(!this.CheckCodeExists(existingDictionary,countryCode))
+        if(!DialingCodes.CheckCodeExists(existingDictionary,countryCode))
         {
             return existingDictionary;
         }
