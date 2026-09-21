@@ -70,7 +70,14 @@ public static class DialingCodes
     public static Dictionary<int, string> RemoveCountryFromDictionary(
         Dictionary<int, string> existingDictionary, int countryCode)
     {
-        throw new NotImplementedException($"Please implement the (static) RemoveCountryFromDictionary() method");
+       
+        if(!DialingCodes.CheckCodeExists(existingDictionary,countryCode))
+        {
+            return existingDictionary;
+        }
+
+            existingDictionary.Remove(countryCode);
+        return existingDictionary;   
     }
 
     public static string FindLongestCountryName(Dictionary<int, string> existingDictionary)
