@@ -5,7 +5,8 @@ enum LogLevel
     Info,
     Warning,
     Error,
-    Fatal
+    Fatal,
+    Unknown
 };
 static class LogLine
 {
@@ -27,8 +28,12 @@ static class LogLine
 
         string str = logLine.Substring(logLine.IndexOf('[') + 1, logLine.IndexOf(']') );
         
-
-        return LogLine.dict[str];   
+        var exists = LogLine.dict.TryGetValue(str, out LogLevel log);
+        if(exists)
+        {
+            return LogLevel.Unknown;
+        }
+        return    log;
     }
 
     
