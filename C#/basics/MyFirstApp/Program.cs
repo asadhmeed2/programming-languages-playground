@@ -45,7 +45,7 @@ using System;
 
 //Console.WriteLine(QuestLogic.CanFastAttack(knightIsAwake));
 
-
+Console.WriteLine(LogLine.ParseLogLevel("[DBG]: ; expected"));
 
 
 //string s = Identifier.Clean("my   Id");
@@ -55,5 +55,3 @@ using System;
 //string s2 = Identifier.Clean("my\0Id");
 //Console.WriteLine(s2);
 
-
-var car = new RemoteControlCar(10, 2);

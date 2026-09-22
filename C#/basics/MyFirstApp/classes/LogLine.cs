@@ -12,12 +12,12 @@ static class LogLine
 {
     private static Dictionary<string, LogLevel> dict = new Dictionary<string, LogLevel>()
     {
-        ["TRC"] = LogLevel.Trace,
-        ["DBG"] = LogLevel.Debug,
-        ["INF"] = LogLevel.Info,
-        ["WRN"] = LogLevel.Warning,
-        ["ERR"] = LogLevel.Error,
-        ["FTL"] = LogLevel.Fatal
+        {"TRC" , LogLevel.Trace},
+        {"DBG" , LogLevel.Debug},
+        {"INF" , LogLevel.Info},
+            {"WRN" ,LogLevel.Warning},
+                {"ERR" , LogLevel.Error},
+                    {"FTL", LogLevel.Fatal}
     };
 
     public static LogLevel ParseLogLevel(string logLine)
@@ -26,14 +26,16 @@ static class LogLine
         //     return String.Empty;
         // }
 
-        string str = logLine.Substring(logLine.IndexOf('[') + 1, logLine.IndexOf(']') );
-        
+        string str = logLine.Substring(logLine.IndexOf('[') + 1, logLine.IndexOf(']')-1 );
+
         var exists = LogLine.dict.TryGetValue(str, out LogLevel log);
-        if(exists)
+        
+
+        if(!exists)
         {
             return LogLevel.Unknown;
         }
-        return    log;
+        return  log;
     }
 
     
