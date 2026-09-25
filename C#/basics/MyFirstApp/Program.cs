@@ -45,8 +45,7 @@ using System;
 
 //Console.WriteLine(QuestLogic.CanFastAttack(knightIsAwake));
 
-Console.WriteLine(LogLine.ParseLogLevel("[DBG]: ; expected"));
-
+Console.WriteLine(LogLine.OutputForShortLog(LogLevel.Error, "Stack overflow"));
 
 //string s = Identifier.Clean("my   Id");
 

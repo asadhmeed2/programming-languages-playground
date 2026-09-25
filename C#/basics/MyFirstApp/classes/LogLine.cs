@@ -1,12 +1,12 @@
 enum LogLevel
 {
-    Trace,
-    Debug,
-    Info,
-    Warning,
-    Error,
-    Fatal,
-    Unknown
+    Trace = 1,
+    Debug = 2   ,
+    Info = 4,
+    Warning = 5,
+    Error = 6,
+    Fatal = 42,
+    Unknown = 0 
 };
 static class LogLine
 {
@@ -42,6 +42,6 @@ static class LogLine
 
     public static string OutputForShortLog(LogLevel logLevel, string message)
     {
-        throw new NotImplementedException("Please implement the (static) LogLine.OutputForShortLog() method");
+        return $"{(int)logLevel}:{message}";
     }
 }
