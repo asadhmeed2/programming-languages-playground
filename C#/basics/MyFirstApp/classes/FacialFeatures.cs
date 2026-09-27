@@ -9,7 +9,19 @@ public class FacialFeatures
         PhiltrumWidth = philtrumWidth;
     }
     // TODO: implement equality and GetHashCode() methods
+
+    public bool Equal(FacialFeatures instance)
+    {
+        if (instance.EyeColor == this.EyeColor && instance.PhiltrumWidth == this.PhiltrumWidth)
+        {
+            return true;
+        }
+        return false;
+
+
+    }
 }
+
 
 public class Identity
 {
