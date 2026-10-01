@@ -34,14 +34,20 @@ public class Identity
         FacialFeatures = facialFeatures;
     }
     // TODO: implement equality and GetHashCode() methods
+    //
+    public bool Equal(Identity identity)
+    {
+        if(this.Email == identity.Email && this.FacialFeatures.Equal(identity.FacialFeatures))
+        {
+            return true;
+        }
+        return false;
+    }
 }
 
 public class Authenticator
 {
-    public static bool AreSameFace(FacialFeatures faceA, FacialFeatures faceB)
-    {
-        throw new NotImplementedException("Please implement the (static) Authenticator.AreSameFace() method");
-    }
+    public static bool AreSameFace(FacialFeatures faceA, FacialFeatures faceB)=>faceA.Equal(faceB);
 
     public bool IsAdmin(Identity identity)
     {
