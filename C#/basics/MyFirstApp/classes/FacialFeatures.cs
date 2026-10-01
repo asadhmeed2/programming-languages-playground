@@ -49,10 +49,7 @@ public class Authenticator
 {
     public static bool AreSameFace(FacialFeatures faceA, FacialFeatures faceB)=>faceA.Equal(faceB);
 
-    public bool IsAdmin(Identity identity)
-    {
-        throw new NotImplementedException("Please implement the Authenticator.IsAdmin() method");
-    }
+    public bool IsAdmin(Identity identity) => identity.Email == "admin@exerc.ism" && identity.FacialFeatures.Equal(new FacialFeatures("green",0.9m));
 
     public bool Register(Identity identity)
     {
