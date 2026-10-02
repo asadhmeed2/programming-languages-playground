@@ -57,7 +57,7 @@ public class Authenticator
 
     public bool Register(Identity identity)
     {
-        if(this.identityEmail2Identity[identity.Email] != null)
+        if(this.identityEmail2Identity.TryGetValue(identity.Email, out var existsIdentity))
         {
             return false;
         }
