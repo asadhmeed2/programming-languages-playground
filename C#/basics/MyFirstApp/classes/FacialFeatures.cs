@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class FacialFeatures
 {
     public string EyeColor { get; }
@@ -47,7 +49,7 @@ public class Identity
 
 public class Authenticator
 {
-    private Identity[] itentities = [];
+    private Dictionary<string,Identity> identityEmail2Identity = new Dictionary<string,Identity>{};
 
     public static bool AreSameFace(FacialFeatures faceA, FacialFeatures faceB)=>faceA.Equal(faceB);
 
@@ -55,7 +57,12 @@ public class Authenticator
 
     public bool Register(Identity identity)
     {
-        throw new NotImplementedException("Please implement the Authenticator.Register() method");
+        if(this.identityEmail2Identity[identity.Email] != null)
+        {
+            return false;
+        }
+        this.identityEmail2Identity[identity.Email] = identity;
+        return true;
     }
 
     public bool IsRegistered(Identity identity)
