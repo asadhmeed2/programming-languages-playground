@@ -47,6 +47,8 @@ public class Identity
 
 public class Authenticator
 {
+    private Identity[] itentities = [];
+
     public static bool AreSameFace(FacialFeatures faceA, FacialFeatures faceB)=>faceA.Equal(faceB);
 
     public bool IsAdmin(Identity identity) => identity.Email == "admin@exerc.ism" && identity.FacialFeatures.Equal(new FacialFeatures("green",0.9m));
