@@ -67,7 +67,15 @@ public class Authenticator
 
     public bool IsRegistered(Identity identity)
     {
-        throw new NotImplementedException("Please implement the Authenticator.IsRegistered() method");
+        if(this.identityEmail2Identity.TryGetValue(identity.Email,out Identity existsIdentity))
+        {
+            if(identity.Equal(existsIdentity))
+            {
+                return true;
+            }
+            return false;
+        }
+        return false;
     }
 
     public static bool AreSameObject(Identity identityA, Identity identityB)
